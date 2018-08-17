@@ -18,11 +18,11 @@ class Deck
     public function shuffle()
     {
         $cards = [];
-        for ($i = 1; $i < 53; $i++) {
+        for ($i = 0; $i < 52; $i++) {
            $cards[] = $i;
         }
-
         shuffle($cards);
+
         return $cards;
     }
 
@@ -37,6 +37,7 @@ class Deck
         for ($i = 0; $i < 5; $i++) {
             $hand[] = array_pop($this->deck);
         }
+        
         return $hand;
     }
 }
